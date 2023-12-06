@@ -1,4 +1,3 @@
-// src/pages/api/db.ts
 import mariadb, { Pool, PoolConnection } from 'mariadb';
 
 const pool: Pool = mariadb.createPool({
@@ -6,7 +5,7 @@ const pool: Pool = mariadb.createPool({
     user: 'admin',
     password: 'admin123',
     database: 'subway-delivery-app',
-    connectionLimit: 50, // ajuste conforme necessário
+    connectionLimit: 50,
 });
 
 async function query(sql: string, params?: any[]): Promise<any> {
